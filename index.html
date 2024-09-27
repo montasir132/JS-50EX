@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript demo</title>
+    <!--favicon link-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <!-- ex1  -->
+        <h2 class="text-danger">click the button to change the text
+        </h2>
+        <button onclick="textChange()" type="button" class="btn btn-danger">
+        textChabutnge
+        </button>
+        <h3 id="tc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3><hr>
+        <!-- ex2 -->
+        <h2 class="text-danger">click the button to show the Date</h2>
+        <button onclick="showDate()" type="button" class="btn btn-danger">
+          Show date 
+        </button>
+        <h3 id="sd">the date is</h3><hr>
+        <!-- ex3-->
+        <h2 class="text-danger">click the button to on/off the bulb </h2>
+        <button onclick="bulbon()" type="button" class="btn btn-success">
+          on  
+        </button>
+        <button onclick="bulboff()" type="button" class="btn btn-danger">
+          off 
+        </button>
+        <img id="bulb" src="images/pic_bulboff.gif" alt="js"><hr>
+      <!-- ex4-->
+      <h2 class="text-danger">click the button to change the style</h2>
+      <button onclick="changeCss()" type="button" class="btn btn-success">
+        change css
+      </button>
+      <h3 id="css">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis nisi praesentium laborum sunt accusantium vitae sapiente nemo animi, voluptatibus similique obcaecati excepturi dolorem dolor quo a. Laborum pariatur similique dolore!</h3><hr>
+      <!-- ex5-->
+      <h2 class="text-danger">click the button to show/hide the content</h2>
+      <button onclick="textShow()" type="button" class="btn btn-success">
+      show
+      </button>
+      <button onclick="textHide()" type="button" class="btn btn-success">
+      hide
+      </button>
+      <h3 id="txh">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias dolorem adipisci laborum dicta tenetur ab odit esse, eius minima tempora eveniet, sapiente dolore consequuntur voluptatem. Recusandae ducimus totam magnam aperiam.</h3><hr>
+      <!-- ex6 -->
+      <h2 class="text-danger">click the button to text show the body</h2>
+      <button onclick="textShow1()" type="button" class="btn btn-success">
+      show
+      </button>
+      <h3 id="show"></h3><hr>
+      <!-- ex7-->
+      <h2 class="text-danger">Click this number to Show the result</h2>
+      <button id="cr1" onclick="demoResult1()" type="button" class="btn btn-success">
+        2070+9-37
+      </button>
+      <hr>
+      <!-- ex8-->
+      <h2 class="text-danger">Click this number to Show the result</h2>
+      <button id="cr2" onclick="demoResult2()" type="button" class="btn btn-success">
+        (2070+9-370)*790/3
+      </button>
+      <hr>
+      <!-- ex9-->
+      <h2 class="text-danger">Click this number to Show the result in window.alert</h2>
+      <button onclick="demoResult4()" type="button" class="btn btn-success"> 2070+9</button>
+      <hr>
+      <!-- ex10-->
+      <h2 class="text-danger">Click this number to Show the result in alert</h2>
+      <button onclick="demoResult3()" type="button" class="btn btn-success"> 2070+9*2</button>
+      <hr>
+      <!-- ex11-->
+      <h2 class="text-danger">Click this number to Show the result in console.log</h2>
+      <button onclick="demoResult5()" type="button" class="btn btn-success">685-5+863</button>
+      <hr>
+      <!-- ex12-->
+      <h2 class="text-danger">Click this button to Show the result in window.print</h2>
+      <button id="printnow" onclick="demoResult6()" type="button" class="btn btn-success"><i class="fa fa-print" aria-hidden="true"></i>print</button>
+      <!-- ex13-->
+      <h2 class="text-danger">Click this number to Show the result in JavaScript Numbers</h2>
+      <button id="js_num" onclick="demoResult7()" type="button" class="btn btn-success">50.40</button>
+      <hr>
+      <!-- ex14-->
+      <h2 class="text-danger">Click this button to Show the result in x=2070
+        y=90
+        x+y=?</h2>
+      <button id="xy1" onclick="demoResult8()" type="button" class="btn btn-success">
+        result
+      </button>
+      <hr>
+      <!-- ex15-->
+      <h2 class="text-danger">Click this button to Show the result in x=2070
+        y=90 z=9
+        (x+y)*z=?</h2>
+      <button id="xyz1" onclick="demoResult9()" type="button" class="btn btn-success">
+        result
+      </button>
+      <hr>
+      <!-- ex16-->
+      <h2 class="text-danger">Click this button to Show the result in lastName = "Doe";lastname = "Peterson";
+        lastname=lastname
+      </h2>
+      <button id="last-name" onclick="demoResult10()" type="button" class="btn btn-success">
+        result
+      </button>
+      <hr>
+      <!-- ex17-->
+      <h2 class="text-danger">Click this button to Show the result in x=2070
+        y=x+9
+        y=?</h2>
+      <button id="xy2" onclick="demoResult11()" type="button" class="btn btn-success">
+        result
+      </button>
+      <hr>
+      <!-- ex18-->
+      <h2 class="text-danger">Click this button to Show the result in x=2070 y=9
+        z=x-y</h2>
+      <button id="xyz2" onclick="demoResult12()" type="button" class="btn btn-success">
+        result
+      </button>
+      <hr>
+      <!-- ex19-->
+      <h2 class="text-danger">Click this button to Show the result in JavaScript Variables </h2>
+      <button id="quotes" onclick="demoResult13()" type="button" class="btn btn-success">
+        3.14 John Doe Yes I am!
+      </button>
+      <hr>
+      <!-- ex20-->
+      <h2 class="text-danger">click the button to flow the text</h2>
+      <p id="textr8">Lorem ipsum dolor sit </p>
+      <button  onclick="Flow()" type="button" class="btn btn-success">
+        try
+      </button>
+      <hr>
+      <!-- ex21-->
+      <h2 class="text-danger">click the button to show/hide the border </h2>
+      <button  onclick="bshow()" type="button" class="btn btn-success">Show</button>
+      <button  onclick="bhide()" type="button" class="btn btn-danger">Hide</button>
+      <h3 id="boder" style="border: 5px dashed pink;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nam culpa quis corrupti eius nostrum error facere maxime at delectus ad minima, cumque odit impedit molestiae debitis perspiciatis recusandae laudantium.</h3>
+      <hr>
+      <!-- ex22-->
+      <h2 class="text-danger">click the button to User cancelled the prompt</h2>
+      <button onclick="promptBox()" type="button" class="btn btn-success">try</button>
+      <hr>
+      <!--example23-->
+      <h2 class="text-danger">click the button to show the alert msg for the prev exmple</h2>
+      <button onclick="showAlert3()" type="button" class="btn btn-dark">show</button>
+      <hr>
+      <!--example24-->
+      <h2 class="text-danger">click the button to show the  endwith method </h2>
+      <button onclick="showEnd()" type="button" class="btn btn-dark">show</button>
+      <h3 id="send"></h3> 
+      <hr>
+      <!--example25-->
+      <h2 class="text-danger">click the button to show the  template of strings </h2>
+      <button onclick="showTem()" type="button" class="btn btn-dark">show</button>
+      <h3 id="stem"></h3> 
+      <hr>
+      <!--example26-->
+      <h2 class="text-danger">click the button to show the alert msg for the prev exmple</h2>
+      <button onclick="showAlert4()" type="button" class="btn btn-dark">show</button>
+
+
+      <hr>
+      <!--example27-->
+  <h2 class="text-danger">click the button to show the  multiline  strings </h2>
+  <button onclick="showMulti()" type="button" class="btn btn-dark">show</button>
+<h3 id="smul"></h3> 
+
+      <hr>
+      <!--example28-->
+  <h2 class="text-danger">click the button to show the alert msg for the prev exmple</h2>
+  <button onclick="showAlert5()" type="button" class="btn btn-dark">show</button>
+
+      <hr>
+      <!--example29-->
+  <h2 class="text-danger">click the button to show the  variables of strings </h2>
+  <button onclick="showVari()" type="button" class="btn btn-dark">show</button>
+<h3 id="svari"></h3> 
+
+
+      <hr>
+      <!--example30-->
+  <h2 class="text-danger">click the button to show the alert msg for the prev exmple</h2>
+  <button onclick="showAlert6()" type="button" class="btn btn-dark">show</button>
+
+
+
+      <hr>
+      <!--example31-->
+  <h2 class="text-danger">click the button to show the numbers of strings can written without decimals </h2>
+  <button onclick="showDeci()" type="button" class="btn btn-dark">show</button>
+<h3 id="sdeci"></h3> 
+
+      <hr>
+      <!--example32-->
+  <h2 class="text-danger">click the button to show the numbers of strings can written with scientific (exponent) notation</h2>
+  <button onclick="showSci()" type="button" class="btn btn-dark">show</button>
+<h3 id="sci"></h3> 
+
+
+      <hr>
+      <!--example33-->
+  <h2 class="text-danger">click the button to show the numbers of Floating Point Precision</h2>
+  <button onclick="showFloat()" type="button" class="btn btn-dark">show</button>
+<h3 id="sfloat"></h3> 
+
+
+      <hr>
+      <!--example34-->
+  <h2 class="text-danger">click the button to show the alert msg for the prev exmple</h2>
+  <button onclick="showAlert7()" type="button" class="btn btn-dark">show</button>
+
+
+      <hr>
+      <!--example35-->
+  <h2 class="text-danger">click the button to show the Integer Precision</h2>
+  <button onclick="showInteger()" type="button" class="btn btn-dark">show</button>
+<h3 id="sinte"></h3> 
+
+
+      <hr>
+      <!--example36-->
+  <h2 class="text-danger">click the button to show the BigInt Multiply</h2>
+  <button onclick="showBmulti()" type="button" class="btn btn-dark">show</button>
+<h3 id="sbmulti"></h3>
+
+
+      <hr>
+      <!--example37-->
+  <h2 class="text-danger">click the button to show the BigInt Divide</h2>
+  <button onclick="showBdivide()" type="button" class="btn btn-dark">show</button>
+<h3 id="sbdivi"></h3>
+
+
+      <hr>
+      <!--example38-->
+  <h2 class="text-danger">click the button to show the JavaScript Number Properties</h2>
+  <button onclick="showNumpro()" type="button" class="btn btn-dark">show</button>
+<h3 id="snumpro"></h3>
+
+
+      <hr>
+      <!--example39-->
+<h2 class="text-danger">click the button to show the JavaScript The MIN_VALUE Property</h2>
+  <button onclick="showMin()" type="button" class="btn btn-dark">show</button>
+<h3 id="smin"></h3>
+
+
+      <hr>
+      <!--example40-->
+<h2 class="text-danger">click the button to show theThe POSITIVE_INFINITY Property
+</h2>
+  <button onclick="showPos()" type="button" class="btn btn-dark">show</button>
+<h3 id="spos"></h3>
+
+
+      <hr>
+      <!--example41-->
+<h2 class="text-danger">click the button to show theThe NEGATIVE_INFINITY Property
+</h2>
+  <button onclick="showNeg()" type="button" class="btn btn-dark">show</button>
+<h3 id="sneg"></h3>
+
+
+
+
+      <hr>
+      <!--example42-->
+<h2 class="text-danger">click the button to show JavaScript Arrays
+</h2>
+  <button onclick="showArray()" type="button" class="btn btn-dark">show</button>
+<h3 id="sarr"></h3>
+
+      <hr>
+      <!--example43-->
+<h2 class="text-danger">click the button to show The toString() Method
+</h2>
+  <button onclick="showTsring()" type="button" class="btn btn-danger">show</button>
+<h3 id="stsring"></h3>
+
+
+      <hr>
+      <!--example44-->
+<h2 class="text-danger">click the button to show Arrays use numbers to access its elements.
+</h2>
+  <button onclick="showAnum()" type="button" class="btn btn-outline-light">show</button>
+<h3 id="sanum"></h3>
+
+
+      <hr>
+      <!--example45-->
+<h2 class="text-danger">click the button to show JavaScript uses names to access object properties.
+</h2>
+  <button onclick="showNacc()" type="button" class="btn btn-outline-dark">show</button>
+<h3 id="snacc"></h3>
+
+
+
+      <hr>
+      <!--example46-->
+<h2 class="text-danger">click the button to show JavaScript Booleans
+</h2>
+  <button onclick="showBool()" type="button" class="btn btn-dark">show</button>
+<h3 id="sbool"></h3>
+
+
+      <hr>
+      <!--example47-->
+<h2 class="text-danger">click the button to show Display the Boolean value of 0:
+</h2>
+  <button onclick="showBoold()" type="button" class="btn btn-primary">show</button>
+<h3 id="sboold"></h3>
+
+
+
+      <hr>
+      <!--example48-->
+<h2 class="text-danger">click the button to show JavaScript Comparison
+</h2>
+  <button onclick="showComp()" type="button" class="btn btn-success">show</button>
+<h3 id="scomp"></h3>
+
+
+
+
+      <hr>
+      <!--example49-->
+<h2 class="text-danger">click the button to show JavaScript Comparison
+</h2>
+  <button onclick="showCompa()" type="button" class="btn btn-dark">show</button>
+<h3 id="scompa"></h3>
+
+
+
+      <hr>
+      <!--example50-->
+<h2 class="text-danger">click the button to show JavaScript Comparison
+</h2>
+  <button onclick="showCompar()" type="button" class="btn btn-dark">show</button>
+<h3 id="scompar"></h3>
+
+      <hr>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
